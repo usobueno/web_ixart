@@ -1,284 +1,69 @@
 
-html { 
-    height: -webkit-fill-available;    /* per a dispositius mòbils */
-    }
+html {
+    height: -webkit-fill-available;
+}
 body {
-    display: flex;    /* tipus de display que ofereix més prestacions que block */
-    flex-direction: column;    /* els elements es disposen de dalt cap abaix */
-    justify-content: space-between;    /* els elements, separats per espais, ocupen tot l'espai disponibles */
-    min-height: 100vh;    /* alçària de la pantalla en navegadors d'escriptori */
-    min-height: 100svh;    /* per a navegadors on la declaració anterior no és precisa */
-    min-height: -webkit-fill-available;    
-    margin: 0px;    /* elimina tots els marges del document */
-    font-family: sans-serif;    /* un tipus de lletra adient per a llocs web */
-    background-color: #FCDEE0;    /* color de fons en format #RRGGBB */
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: -webkit-fill-available;
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: rgb(255, 217, 159);
+}
 #superior {
     display: flex;
-    height: 8vmax;    /* alçària d'un 8% respecte l'alçària de la pantalla */
-    justify-content: center;    /* centra els elements en la direcció de disposició */
-    align-items: center;    /* centra els elements en la direcció perpendicular a la de disposició */
-    font-size: 4vmax;    /* mida d'un 4% respecte l'alçària de la pantalla */
-    color: white;    /* color del text */
-    background-color: #950E17;    /* color de fons */
-    }
-
+    height: 8vmax;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmax;
+    color: rgb(255, 255, 255);
+    background-color: rgb(115, 70, 38);
+}
 #seccio_1 {
-display: flex;    /* única secció que es mostra a l'inici */
-justify-content: center;    /* contingut centrat en la direcció de disposició */
-align-items: center;    /* contingut centrat en la direcció transversal */
-font-size: 4vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmax;
+    color: rgb(115, 70, 38);
+}
+#seccio_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmax;
+    color: rgb(115, 70, 38);
+}
+#seccio_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmax;
+    color: rgb(115, 70, 38);
+}
+#inici {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 2vmax;
+    color: rgb(0, 0, 0);
 }
 #menu {
-height: 8vmax; /* alçària d'un 8% respecte l'alçària de la pantalla
-*/
-}   
-
-#menu {
-display: flex; /* el menú és un contenidor de tipus flex */
-height: 8vmax;
- }
+    height: 8vmax;
+    display: flex;
+}
 #menu i{
-flex: 1; /* cada botó pretén ocupar tot l'espai disponible */
-display: flex; /* contenidor flex on centrar-hi la icona */
-justify-content: center;
-align-items: center;
-color: white;
-background-color: #950E17;
-font-size: 5vmax;
-cursor: pointer; /* en ordinadors, indica que s'hi pot fer clic */
-}
-
-@media (orientation: landscape) {
-body {
-
-flex-direction: row; /* sobreescriu la declaració flex-direction:
-
-column; */
-
-flex-flow: row-reverse; /* disposició de dreta a esquerra, per
-
-mostrar el menú a l'esquerra */
-}
-#superior {
-
-display: none; /* franja superior oculta per optimitzar l'espai
-
-*/
-}
-#menu {
-flex-direction: column;
-width: 8vmax;
-height: auto; /* sobreescriu la declaració height: 8vmax; */
-}
-}
-
-
-#div_foto {
-    flex: 1;
-    display: flex;
+    flex: 1; 
+    display: flex; 
     justify-content: center;
     align-items: center;
-}
-#icona_camera {
-    font-size: 40vmin;
-    color: #950E17;
-}
-#foto {
-    max-width: 60vmin;    /* dimensions màximes per a la prveisualització de les fotos */
-    max-height: 60vmin;
-    cursor: pointer;
-}
-#div_control {
-    height: 25vmax;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#div_control i {
-    cursor: pointer;
-    font-size: 20vmin;    
-    color: green;
-}
-#obturador {
-    position: absolute;
-    width: 0;
-    opacity: 0;
-}
-#canvas, #desa {
-    display: none;
-}
-#div_gran {
-    display: none;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    max-height: 100vh;
-    max-height: 100svh;
-    max-height: -webkit-fill-available;
-}
-#foto_gran {
-    max-width: 95vmin;
-    max-height: 95vmax;
-    cursor: pointer;
-}
-@media (orientation: landscape) {
-    #seccio_2 {
-        flex-direction: row;
+    color: rgb(255, 217, 159);
+    background-color: rgb(115, 70, 38);
+    font-size: 5vmax;
+    cursor: pointer; 
     }
-    #div_foto {
-        flex-direction: column;
-    }
-    #div_control {
-        width: 25vmax;
-        height: auto;
-        flex-direction: column;
-    }
-    #div_gran {
-        max-height: 100vh;
-        max-height: 100svh;
-    }
-    #foto_gran {
-        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
-    }
-}
-
-#llista_titol {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    }
-    #llista_titol i {
-    font-size: 4vmax;
-    color:#950E17;
-    }
-    #llista_titol i:nth-child(1) { /* primer <i> (miniatura de la foto) */
-    flex: 2;
-    }
-    #llista_titol i:nth-child(2) { /* segon <i> (data i hora) */
-    flex: 3;
-    }
-    #llista_titol i:nth-child(3) { /* tercer <i> (icona per esborrar la foto)
-    */
-    flex: 1;
-    }
-    #llista_fotos {
-    height: 70vmax;
-    overflow-y: scroll;
-    }
-    #llista_fotos::-webkit-scrollbar {
-    display: none; /* oculta la barra de desplaçament vertical */
-    }
-    @media (orientation: landscape) {
-    #llista_fotos {
-    height: 70vmin;
-    }
-}
-
-#div_foto {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#icona_camera {
-    font-size: 40vmin;
-    color: #950E17;
-}
-#foto {
-    max-width: 60vmin;    /* dimensions màximes per a la prveisualització de les fotos */
-    max-height: 60vmin;
-    cursor: pointer;
-}
-#div_control {
-    height: 25vmax;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#div_control i {
-    cursor: pointer;
-    font-size: 20vmin;    
-    color: green;
-}
-#obturador {
-    position: absolute;
-    width: 0;
-    opacity: 0;
-}
-#canvas, #desa {
-    display: none;
-}
-#div_gran {
-    display: none;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    max-height: 100vh;
-    max-height: 100svh;
-    max-height: -webkit-fill-available;
-}
-#foto_gran {
-    max-width: 95vmin;
-    max-height: 95vmax;
-    cursor: pointer;
-}
-@media (orientation: landscape) {
-    #seccio_2 {
-        flex-direction: row;
-    }
-    #div_foto {
-        flex-direction: column;
-    }
-    #div_control {
-        width: 25vmax;
-        height: auto;
-        flex-direction: column;
-    }
-    #div_gran {
-        max-height: 100vh;
-        max-height: 100svh;
-    }
-    #foto_gran {
-        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
-    }
-}
 
 
-#llista_titol {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    }
-    #llista_titol i {
-    font-size: 4vmax;
-    color:#950E17;
-    }
-    #llista_titol i:nth-child(1) { /* primer <i> (miniatura de la foto) */
-    flex: 2;
-    }
-    #llista_titol i:nth-child(2) { /* segon <i> (data i hora) */
-    flex: 3;
-    }
-    #llista_titol i:nth-child(3) { /* tercer <i> (icona per esborrar la foto)
-    */
-    flex: 1;
-    }
-    #llista_fotos {
-    height: 70vmax;
-    overflow-y: scroll;
-    }
-    #llista_fotos::-webkit-scrollbar {
-    display: none; /* oculta la barra de desplaçament vertical */
-    }
-    @media (orientation: landscape) {
-    #llista_fotos {
-    height: 70vmin;
-    }
-    }
+
 
 
